@@ -1,0 +1,35 @@
+Refer images in local
+
+### **Overall Goal**
+Practice creating GET endpoints with query parameters by building a small API that returns time-related information.
+
+---
+
+### **Exercise 1: Time Formatting**
+
+**Part 1: List Available Formats**
+*   **Purpose:** Return a list of common time formatting patterns (e.g., RFC 2822, ISO 8601).
+*   **Implementation:** Can return a static list from memory or, for extra difficulty, load it from a local file.
+
+**Part 2: Get Current Time in a Specific Format**
+*   **Purpose:** Return the current time, formatted according to a query parameter (e.g., `format=ISO8601`).
+*   **Behavior:**
+    *   If no format is specified, use a default.
+    *   If the requested format is not supported, return a `400 Bad Request` error with a clear message.
+*   **Practice Suggestion:** Try implementing the parameter using both the standard query string (`?format=ISO8601`) and a more RESTful URL path style.
+
+---
+
+### **Exercise 2: Time Zones**
+
+**Part 1: List Common Time Zones**
+*   **Purpose:** Provide a list of commonly used time zone string identifiers.
+
+**Part 2: Get Current Time for a Time Zone**
+*   **Purpose:** Return the current time for a specific time zone.
+*   **Parameters:**
+    *   A required time zone.
+    *   An optional format (from Exercise 1).
+*   **Behavior:**
+    *   Only time zones from the list in Part 1 should be supported.
+    *   For an unsupported time zone, return a `400 Bad Request` error with a message like, "Time zone name is not supported."
