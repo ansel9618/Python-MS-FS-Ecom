@@ -1,0 +1,10 @@
+conda env for python
+----------------------
+conda create -p venv python=3.12
+conda activate envpath
+
+for creating next application
+-npx create-next-app@latest hello-tutorial --typescript
+
+for running tghe project 
+-npn run dev
